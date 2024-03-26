@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/slate/bootstrap.min.css" integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="searchInput">
+        <input class="form-control" type="text" id="searchInput" onkeyup="searchChampions()" placeholder="Champion">
+    </div>
+    <div id="buttons">
+        <button class="btn btn-primary sort-button" data-sorting="overallRate">Overall Rate</button>
+        <button class="btn btn-primary sort-button" data-sorting="winRate">Win Rate</button>
+        <button class="btn btn-primary sort-button" data-sorting="pickRate">Pick Rate</button>
+    </div>
+    <div id="grid"></div>
+<script src="fun.js"></script>
+</body>
+</html>
