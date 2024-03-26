@@ -5,7 +5,7 @@ var sortButtons = document.querySelectorAll('.sort-button');
 
 function fetchAndProcessData(sortingKey) {
     
-    fetch('https:
+    fetch('https://raw.githubusercontent.com/badspacebar/release/master/files/shards.json')
         .then(response => response.json())
         .then(data => {
             var champions = data;
@@ -61,7 +61,7 @@ function fetchAndProcessData(sortingKey) {
             var counter = 0;
             optimalChampions.forEach(function(champion) {
                 counter ++;
-                htmlContent += '<div class="champion"><label>'+counter+'</label><div class="championPic"><img class="img img-fluid" src=https:
+                htmlContent += '<div class="champion"><label>'+counter+'</label><div class="championPic"><img class="img img-fluid" src=https://game.gtimg.cn/images/lol/act/img/champion/' + champion.name + '.png></div><div class="championName">' + champion.name + '</div><div class=shard>'+champion.shard+'</div><div class="winRate">Win Rate: ' + champion.winRate + '</div><div class="pickRate">Pick Rate: ' + champion.pickRate + '</div><div class="overallRate">Overall Rate: ' + champion.overallRate + '%</div></div>';
             });
 
             
