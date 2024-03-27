@@ -18,7 +18,7 @@ function fetchAndProcessData(sortingKey) {
                 for (var championName in champions) {
                     if (champions.hasOwnProperty(championName)) {
                         var champion = champions[championName];
-                        var overallRate = (champion.pick_rate + champion.win_rate) / 2 * 100; 
+                        var overallRate = ((champion.pick_rate*100) * (champion.win_rate*100)) / 100; 
                         var highestPickRate = 0;
                         var highestPickRateShardName = "";
                 
