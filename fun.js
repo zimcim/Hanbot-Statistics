@@ -14,10 +14,13 @@ function fetchAndProcessData(sortingKey) {
             function findOptimalChampions(champions, sortingKey) {
                 var sortedChampions = [];
 
-                
+                var defaultPickRate = 0.0;
+                var defaultWinRate = 0.0;
                 for (var championName in champions) {
                     if (champions.hasOwnProperty(championName)) {
                         var champion = champions[championName];
+                        champion.pick_rate = champion.pick_rate || defaultPickRate;
+                        champion.win_rate = champion.win_rate || defaultWinRate;
                         var overallRate = ((champion.pick_rate*100) * (champion.win_rate*100)) / 100; 
                         var highestPickRate = 0;
                         var highestPickRateShardName = "";
